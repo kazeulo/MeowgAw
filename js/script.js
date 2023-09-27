@@ -21,7 +21,7 @@ sr.reveal('.icons', {delay: 500, origin:'left'});
 sr.reveal('.infosection h2', {delay: 200, origin:'top'});
 sr.reveal('.info-card', {delay: 400, origin:'left'});
 sr.reveal('.slider-container h2', {delay: 200, origin:'top'});
-sr.reveal('.wrapper .card', {delay: 400, origin:'left'});
+sr.reveal('.wrapper', {delay: 50, origin:'left'});
 
 
 /********change bg color on scroll*********/

@@ -35,8 +35,8 @@ header{
 }
 
 .headerOnScroll{
-	transition: all 0.55s ease;
-	background: rgba(1, 1, 1, 0.3);
+	transition: all 0.30s ease;
+	background: rgba(1, 1, 1, 0.35);
 }
 
 .logo{
@@ -308,6 +308,7 @@ section{
 }
 
 .wrapper i {
+	z-index: 1000;
   	top: 50%;
   	height: 44px;
   	width: 44px;
@@ -367,7 +368,7 @@ section{
 }
 
 .carousel .card:hover{
-	transform: translateY(-8px);
+	transform: translateY(-5px);
 }
 
 .carousel .card:first-child {
