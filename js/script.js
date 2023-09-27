@@ -18,5 +18,24 @@ const sr= ScrollReveal ({
 sr.reveal('.menu-text', {delay: 200, origin:'top'});
 sr.reveal('.menu-img', {delay: 450, origin:'top'});
 sr.reveal('.icons', {delay: 500, origin:'left'});
+sr.reveal('.infosection h2', {delay: 200, origin:'top'});
+sr.reveal('.info-card', {delay: 400, origin:'left'});
+sr.reveal('.slider-container h2', {delay: 200, origin:'top'});
+sr.reveal('.wrapper .card', {delay: 400, origin:'left'});
+
+
+/********change bg color on scroll*********/
+function changeBg(){
+	var header= document.getElementById('header');
+	var scrollValue = window.scrollY;
+	if(scrollValue < 110){
+		header.classList.remove('header');
+	}
+	else{
+		header.classList.add('headerOnScroll');
+	}
+}
+
+window.addEventListener('scroll', changeBg);
 
 

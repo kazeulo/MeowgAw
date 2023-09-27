@@ -28,7 +28,15 @@ header{
 	align-items: center;
 	justify-content: space-between;
 	padding: 33px 10% 10px 10%;
-	background: rgba(1, 1, 1, 0.1);
+}
+
+.header{
+	background: rgba(1, 1, 1, 0.15);
+}
+
+.headerOnScroll{
+	transition: all 0.55s ease;
+	background: rgba(1, 1, 1, 0.3);
 }
 
 .logo{
@@ -334,7 +342,8 @@ section{
 }
 
 .wrapper .carousel {
-  	cursor: pointer;
+	padding: 20px 0;
+	cursor: pointer;
   	overflow: hidden;
   	white-space: nowrap;
   	scroll-behavior: smooth;
@@ -354,6 +363,11 @@ section{
   	width: 300px;
   	display: inline-block;
   	vertical-align: top;
+  	transition: all 0.55s ease;
+}
+
+.carousel .card:hover{
+	transform: translateY(-8px);
 }
 
 .carousel .card:first-child {
