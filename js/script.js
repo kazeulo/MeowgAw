@@ -29,7 +29,7 @@ function changeBg() {
   var header = document.getElementById('header');
   var scrollValue = window.scrollY;
 
-  if (scrollValue < 500) {
+  if (scrollValue < 550) {
     header.classList.remove('headerOnScroll');
     header.classList.add('header');
   } else {
@@ -42,17 +42,37 @@ window.addEventListener('scroll', changeBg);
 
 
 /*************scroll down button***********/
+function showContent(section) {
+    const buttons = document.querySelectorAll('.misvis-btn');
 
-document.getElementById('scroll-link').addEventListener('click', function (event) {
-  event.preventDefault();
+    // Remove 'active' class from all buttons
+    buttons.forEach(button => {
+        button.classList.remove('active');
+    });
 
-  const targetId = this.getAttribute('href').substring(1);
-  const targetElement = document.getElementById(targetId);
+    // Add 'active' class to the clicked button
+    event.currentTarget.classList.add('active');
 
-  window.scrollTo({
-    top: targetElement.offsetTop,
-    behavior: 'smooth'
-  });
-});
+    document.getElementById('missionContent').style.display = 'none';
+    document.getElementById('visionContent').style.display = 'none';
+    document.getElementById('membersContent').style.display = 'none';
+
+    if (section === 'mission') {
+        document.getElementById('missionContent').style.display = 'block';
+        document.querySelector('.misvis-btn.active').classList.remove('active');
+        event.currentTarget.classList.add('active');
+    } else if (section === 'vision') {
+        document.getElementById('visionContent').style.display = 'block';
+    } else if (section === 'members') {
+        document.getElementById('membersContent').style.display = 'block';
+    }
+}
+
+// Initially show the "Mission" content and activate the button
+document.getElementById('missionContent').style.display = 'block';
+document.querySelector('.misvis-btn[onclick="showContent(\'mission\')"]').classList.add('active');
+
+
+
 
 

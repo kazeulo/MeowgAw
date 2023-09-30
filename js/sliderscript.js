@@ -18,7 +18,7 @@ const showHideIcons = () => {
 
 arrowIcons.forEach((icon) => {
   icon.addEventListener("click", () => {
-    let cardWidth = cards[0].offsetWidth + 20; // Card width including margin
+    let cardWidth = cards[0].offsetWidth + 47; // Card width including margin
     carousel.scrollLeft += icon.id === "left" ? -cardWidth : cardWidth;
     setTimeout(() => showHideIcons(), 60);
   });
