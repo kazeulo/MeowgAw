@@ -4,8 +4,9 @@
 /***************colors*********************/
 
 /* To change
+yellows: e0b668 f0d770;
 pinks: #a96357 #f1c5b7 #ffdcd1
-greens: #566f64 #6d897a
+greens: #566f64 #6d897a a6d0ac
 */
 
 *{
@@ -15,7 +16,50 @@ greens: #566f64 #6d897a
 	font-family: 'Poppins', sans-serif;
 	list-style: none;
 	text-decoration: none;
+	scroll-behavior: smooth;
 }
+
+/***************custom button*********************/
+
+.button1{
+	color: white;
+	background-color: #a96357;
+	border: 1px solid transparent;
+	padding: 12px 30px;
+	font-size: 14px;
+	font-weight: 500;
+	border-radius: 30px;
+	text-transform: uppercase;
+	transition: all .55s ease;
+}
+
+.button2{
+	color: white;
+	background-color: #566f64;
+	border: 1px solid transparent;
+	padding: 12px 30px;
+	font-size: 14px;
+	font-weight: 500;
+	border-radius: 30px;
+	text-transform: uppercase;
+	transition: all .55s ease;
+}
+
+
+.button1:hover{
+	background: transparent;
+	color: #a96357;
+	border: 1px solid #a96357;
+	transform: translateX(8px);
+}
+
+.button2:hover{
+	background: transparent;
+	color: #566f64;
+	border: 1px solid #566f64;
+	transform: translateX(8px);
+}
+
 
 /***************header*******************/
 header{
@@ -27,16 +71,17 @@ header{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 33px 10% 10px 10%;
+	padding: 33px 10% 5px 10%;
 }
 
 .header{
-	background: rgba(1, 1, 1, 0.15);
+	transition: all 1s ease;
+	background: rgba(1, 1, 1, 0.10);
 }
 
 .headerOnScroll{
-	transition: all 0.30s ease;
-	background: rgba(1, 1, 1, 0.35);
+	transition: all 0.90s ease;
+	background: linear-gradient(245.59deg, #ffdcd1 0%, #f1c5b7 28.53%, #a96357 75.52%);
 }
 
 .logo{
@@ -57,12 +102,12 @@ header{
 	margin-left: 60px;
 	font-size: 13px;
 	font-weight: 600;
-	border-bottom: 2px solid transparent;
+	border-bottom: 3px solid transparent;
 	transition: all .55s ease;
 }
 
 .navlist a:hover{
-	border-bottom: 3px solid #566f64;
+	border-bottom: 3px solid #f0d770;
 }
 
 .sign{
@@ -82,7 +127,7 @@ header{
 
 .sign a:hover{
 	background-color: white;
-	color: #ffdcd1;
+	color: #566f64;
 }
 
 /***************menu*******************/
@@ -109,7 +154,7 @@ header{
 }
 
 section{
-	padding: 0 20%;
+	padding: 0 25%;
 }
 
 .menu-text{
@@ -141,22 +186,13 @@ section{
 	margin-bottom: 40px;
 }
 
-.menu-text a{
-	display: inline-block;
-	color: white;
-	background-color: #566f64;
-	border: 1px solid transparent;
-	padding: 12px 30px;
-	margin: 0px 10px;
+.menu-btn{
 	line-height: 1.4;
-	font-size: 14px;
-	font-weight: 500;
-	border-radius: 30px;
-	text-transform: uppercase;
-	transition: all .55s ease;
+	margin: 0 10px;
 }
 
-.menu-text a:hover{
+.menu-btn:hover{
+	color: white;
 	background: transparent;
 	border: 1px solid white;
 	transform: translateX(8px);
@@ -220,8 +256,8 @@ section{
 /***************adoption info*******************/
 
 .infosection{
+	padding: 70px 0 40px 0;
 	height: auto;
-	padding: 30px 0;
 }
 
 .infosection h2{
@@ -229,26 +265,21 @@ section{
 }
 
 .info-card{
-	margin: 0 25px;
-	min-width: 230px;
+	width: 30%;
+	margin: 0 auto;
 	padding: 25px 10px;
-	border: 1px solid transparent;
-	border-radius: 20px;
 	transition: all .50s ease;
 }
 
 .info-card:hover{
-	border: 1px #566f64 solid;
 	transform: translateY(5px);
 }
 
 
 .infosection #infos{
 	text-align: center;
-	line-height: 2;
 	display: flex;
-	justify-content: center;
-	position: relative;
+	justify-content: space-between;
 	padding: 25px 10%;
 }
 
@@ -257,53 +288,43 @@ section{
 	font-size: 13px;
 }
 
-#infos a{
-	color: white;
-	background-color: #a96357;
-	border: 1px solid transparent;
-	padding: 12px 30px;
-	font-size: 14px;
-	font-weight: 500;
-	border-radius: 30px;
-	text-transform: uppercase;
-	transition: all .55s ease;
-}
-
-#infos a:hover{
-	background: transparent;
-	color: #a96357;
-	border: 1px solid #a96357;
-	transform: translateX(8px);
-}
-
 #infos .infoimg{
-	padding-top: 20px;
+	padding: 20px 0 10px 0;
 	width: 100px;
 }
 
 /***************slider*******************/
 
 .slider-container{
-	background: #6d897a;
+	text-align: center;
+	background: #e0b668;
+	padding: 55px;
+	width: 100%;
 	height: auto;
-	padding: 35px 0;
+}
+
+.slide-btn{
+	margin-top: 20px;
+}
+
+.slide-btn:hover{
+	color: white;
+	border: 1px solid white;
 }
 
 .slider-container h2{
-	text-align: center;
 	color: white;
 }
 
 .slider{
   	display: flex;
-  	padding: 30px 35px;
-  	align-items: center;
+  	padding: 25px 35px 0 35px;
   	justify-content: center;
 }
 
 .wrapper {
   	display: flex;
-  	max-width: 1000px;
+  	max-width: 980px;
   	position: relative;
 }
 
@@ -317,7 +338,8 @@ section{
   	position: absolute;
   	text-align: center;
   	line-height: 44px;
-  	background: #a96357;
+  	background: #566f64;
+  	align-items: center;
   	color: white;
   	border-radius: 50%;
   	transform: translateY(-50%);
@@ -356,11 +378,10 @@ section{
 }
 
 .carousel .card {
-	border-radius: 20px;
-	padding: 30px;
-  	height: 420px;
+	padding: 22px;
+  	height: 370px;
   	background-color: white;
-  	margin-left: 40px;
+  	margin-left: 35px;
   	width: 300px;
   	display: inline-block;
   	vertical-align: top;
@@ -376,70 +397,38 @@ section{
 }
 
 .carousel .card img{
-	width: 95%;
+	width: 100%;
 	margin: auto;
-}
-
-.carousel .card h3{
-	font-size: 20px;
-	text-align: center;
-	font-weight: 700;
-	padding: 12px 0;
 }
 
 .carousel .card p{
 	font-size: 12px;
 }
-
-.card-btn{
-	color: white;
-	background-color: #a96357;
-	border: 1px solid transparent;
-	padding: 5px 15px;
-	margin: 15px auto;
-	font-size: 13px;
-	font-weight: 400;
-	border-radius: 30px;
-	transition: all .55s ease;
-}
-
-.card-btn:hover{
-	color: #566f64;
-	background-color: transparent;
-	border: 1px solid #566f64;
-	transform: translateX(5px);
-}
 /***************footer*******************/
 
 footer{
 	color: white;
+	background-color: #566f64;
 }
 
 .footer{
 	height: 2 5vh;
-	background-color: #c38679;
 }
 
 .copyright{
-	background-color: #163d30;
-}
-
-.copyright p{
-	color: white;
 	font-size: 11px;
-	padding: 10px;
-	text-align: center;
+	padding: 10px 7% 30px 7%;
 }
 
 .footer{
 	height: auto;
 	display: flex;
 	justify-content: space-between;
-	padding: 33px 9%;
+	padding: 33px 7%;
 }
 
 .footer li a{
-	font-size: 12px;
+	font-size: 13px;
 	color: white;
 	transition: all .50s ease;
 }
