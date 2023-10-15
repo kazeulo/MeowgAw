@@ -21,20 +21,72 @@
 
 			<ul class="navlist">
 					<li><a href="index.html">Home</a></li>
-					<li><a href="#">Gallery</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
 					<li><a href="about.html">About Us</a></li>
 					<li><a href="#">FAQs</a></li>
 			</ul>
 
 			<ul class="sign">
-				<li><button class="user_auth">Log In</button></li>
-				<li><button class="user_auth">Sign in</button></li>
+				<li><button class="user_auth" onclick="openPopup('signin-popup')">Sign In</button></li>
+            	<li><button class="modal user_auth" onclick="openPopup('login-popup')">Log In</button></li>
 			</ul>
 
 			<div class="bx bx-menu" id="menu-icon">
 			</div>
 
+			<!-- Pop-up for sign up -->
+			<div id="signin-popup" class="popup">
+		        <div class="popup-content">
+		            <span class="close" onclick="closePopup('signin-popup')">&times;</span>
+
+		            <form>
+		            	<img src="pics/icon.png">
+		            	<h3>Sign Up to MeowgAw</h3>
+
+		            	<div class="inputs">
+			            	<label for="email">Email Address</label><br>
+			            	<input type="email" id="email"><br>
+			            	<label for="password">Password</label><br>
+			            	<input type="password" id="password"><br>
+			            	<label for="repassword">Re-enter Password</label><br>
+			            	<input type="password" id="repassword"><br>
+			            </div>
+
+			            <button type="submit" class="submit">Sign Up</button>
+			            <p class="reminder">By clicking "Sign Up", I understand and agree to the MeowgAw's collective 
+			            <a href="">Terms</a>, <a href="#">Terms of Use</a>, and <a href="#">Privacy Policy</a>.</p>
+
+			            <p class="alternate">Already have an account? <a href="#">Log in</a></p>
+		        	</form>
+		        </div>
+		    </div>
+
+		    <!-- Pop-up for log in -->
+		    <div id="login-popup" class="popup">
+		        <div class="popup-content">
+		            <span class="close" onclick="closePopup('login-popup')">&times;</span>
+		            <form>
+		            	<img src="pics/icon.png">
+		            	<h3>Sign into MeowgAw</h3>
+
+		            	<div class="inputs">
+			            	<label for="email">Email Address</label><br>
+			            	<input type="email" id="email"><br>
+			            	<label for="password">Password</label><br>
+			            	<input type="password" id="password"><br>
+			            </div>
+
+			            <button type="submit" class="submit">Sign In</button>
+			            <a href="#" class="forgot">Forgot Password?</a>
+			            <p class="alternate">Doesn't have an account yet? <a href="#">Sign Up</a></p>
+		        	</form>
+		        </div>
+		    </div>
+
+
 		</header>
+
+
 
 		<!-------------banner--------------->
 		<section class="menu">
@@ -105,31 +157,26 @@
 				      <div class="card">
 				      	<img src="pics/stray1.jpg">
 				      	<h3>Cool Cat</h3>
-				      	<p id="desc">This is a very cool cal. And smart too.</p>
 				      </div>
 
 				      <div class="card">
 				      	<img src="pics/stray1.jpg">
 				      	<h3>Cool Cat</h3>
-				      	<p id="desc">This is a very cool cal. And smart too.</p>
 				      </div>
 
 				      <div class="card">
 				      	<img src="pics/stray1.jpg">
 				      	<h3>Cool Cat</h3>
-				      	<p id="desc">This is a very cool cal. And smart too.</p>
 				      </div>
 
 				      <div class="card">
 				      	<img src="pics/stray1.jpg">
 				      	<h3>Cool Cat</h3>
-				      	<p id="desc">This is a very cool cal. And smart too.</p>
 				      </div>
 
 				      <div class="card">
 				      	<img src="pics/stray1.jpg">
 				      	<h3>Cool Cat</h3>
-				      	<p id="desc">This is a very cool cal. And smart too.</p>
 				      </div>
 
 				    </div>

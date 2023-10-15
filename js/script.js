@@ -73,6 +73,14 @@ document.getElementById('missionContent').style.display = 'block';
 document.querySelector('.misvis-btn[onclick="showContent(\'mission\')"]').classList.add('active');
 
 
+// Show and hide popups
+function openPopup(popupId) {
+    var popup = document.getElementById(popupId);
+    popup.style.display = "block";
+}
 
-
+function closePopup(popupId) {
+    var popup = document.getElementById(popupId);
+        popup.style.display = "none";
+}
 
