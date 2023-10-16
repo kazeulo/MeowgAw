@@ -3,16 +3,16 @@ let menu= document.querySelector("#menu-icon");
 let navlist = document.querySelector('.navlist');
 
 menu.onclick = () =>{
-	menu.classList.toggle('bx-x');
-	navlist.classList.toggle('open');
+    menu.classList.toggle('bx-x');
+    navlist.classList.toggle('open');
 }
 
 /********transition*********/
 const sr= ScrollReveal ({
-	distance: '65px',
-	duration: 2600,
-	delay: 450,
-	reset: true
+    distance: '65px',
+    duration: 2600,
+    delay: 450,
+    reset: true
 });
 
 sr.reveal('.menu-text', {delay: 200, origin:'top'});
@@ -22,6 +22,10 @@ sr.reveal('.infosection h2', {delay: 200, origin:'top'});
 sr.reveal('.infosection', {delay: 500, origin:'left'});
 sr.reveal('.slider-container h2', {delay: 100, origin:'top'});
 sr.reveal('.wrapper', {delay: 70, origin:'left'});
+sr.reveal('.reveal', {
+    interval: 130, 
+    origin: 'top' 
+});
 
 
 /********change bg color on scroll*********/
@@ -73,6 +77,18 @@ document.getElementById('missionContent').style.display = 'block';
 document.querySelector('.misvis-btn[onclick="showContent(\'mission\')"]').classList.add('active');
 
 
+// Show and hide popups
+function openPopup(popupId) {
+    var popup = document.getElementById(popupId);
+    popup.style.display = "block";
+}
 
+function closePopup(popupId) {
+    var popup = document.getElementById(popupId);
+        popup.style.display = "none";
+}
 
-
+// heart
+function toggleHeart(element) {
+  element.classList.toggle('liked');
+}
