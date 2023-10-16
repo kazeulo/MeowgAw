@@ -251,6 +251,10 @@ header{
 
 /***************menu*******************/
 
+.scroll-down{
+	z-index: 10001;
+}
+
 #menu-icon{
 	color: white;
 	font-size: 30px;
@@ -725,7 +729,6 @@ footer{
     justify-content: space-around;
     left: 50%;
     transform: translateX(-50%);
-    transition: all 0.5s ease;
 }
 
 .categoryButtons button{
@@ -737,6 +740,7 @@ footer{
 	height: 80px;
 	border-radius: 10px;
 	border: 2px solid #a96357;
+	transition: all 0.50s ease;
 }
 
 .categoryButtons button:hover{
