@@ -84,3 +84,9 @@ function closePopup(popupId) {
         popup.style.display = "none";
 }
 
+// heart
+function toggleHeart(element) {
+  element.classList.toggle('liked');
+}
+
+
