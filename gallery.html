@@ -92,39 +92,25 @@
     		</div>
 		</div>
 
+		<div class="categoryButtons">
+			<button onclick="showStrayData('all')">All</button>
+    		<button onclick="showStrayData('cat')">Cats</button>
+    		<button onclick="showStrayData('dog')">Dogs</button>
+  		</div>
+
 		<div class="galleryBody">
 
 			<div class="strayContainer">
+				<!---content in js---->
+			</div>
 
-				<div class="strayBox">
-					<img src="pics/stray1.jpg">
-					<p>Cool Cat</p>
-					<div class="heart-button" onclick="toggleHeart(this)"></span></div>
-				</div>
-				<div class="strayBox">
-					<img src="pics/stray1.jpg">
-					<p>Cool Cat</p>
-				</div>
-
-				<div class="strayBox">
-					<img src="pics/stray1.jpg">
-					<p>Cool Cat</p>
-				</div>
-
-				<div class="strayBox">
-					<img src="pics/stray1.jpg">
-					<p>Cool Cat</p>
-				</div>
-
-				<div class="strayBox">
-					<img src="pics/stray1.jpg">
-					<p>Cool Cat</p>
-				</div>
-
-				<div class="strayBox">
-					<img src="pics/stray1.jpg">
-					<p>Cool Cat</p>
-				</div>
+			<div id="descModal" class="strayModal">
+  				<div class="descContainer">
+    				<span class="close" onclick="closePopup('descModal')" style="color:#a96357">&times;</span>
+    				<div id="desc">
+      				<!---content in js---->
+    				</div>
+  				</div>
 			</div>
 
 		</div>
@@ -184,6 +170,7 @@
 		<script src="https://unpkg.com/scrollreveal"></script>
 		<script src="js/sliderscript.js"></script>
 		<script src="js/script.js"></script>
+		<script src="js/galleryscript.js"></script>
 
 	</body>
 
