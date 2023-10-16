@@ -13,7 +13,7 @@ function storeStrayData() {
 
 // function to retrieve stray data from localStorage
 function retrieveStrayData() {
-  const storedData = localStorage.getItem('strayData');
+  const storedData = localStorage.getItem('strayData');   
   return storedData ? JSON.parse(storedData) : [];
 }
 
@@ -79,33 +79,40 @@ displayStrayData();
 
 // for filtering strays
 function showStrayData(category) {
-  const container = document.querySelector('.strayContainer');
-  const storedStrayData = retrieveStrayData();
 
-  // clear content
-  container.innerHTML = '';
+    // keep buttons active when clicked
+    document.getElementById('allBtn').classList.remove('active');
+    document.getElementById('catBtn').classList.remove('active');
+    document.getElementById('dogBtn').classList.remove('active');
+    
+    document.getElementById(category + 'Btn').classList.add('active');
 
-  // filter the stray data based on the category
-  const filteredStrayData = category === 'all' ? storedStrayData : storedStrayData.filter(stray => stray.type === category);
+    const container = document.querySelector('.strayContainer');
+    const storedStrayData = retrieveStrayData();
 
-  // display the filtered stray data
-  filteredStrayData.forEach((stray, index) => {
-    const strayBox = document.createElement('div');
-    strayBox.classList.add('strayBox');
-    strayBox.setAttribute('data-index', index + 1);
-    strayBox.setAttribute('data-name', stray.name);
+    // clear content
+    container.innerHTML = '';
 
-    const img = document.createElement('img');
-    img.src = stray.imgSrc;
+    // filter the stray data based on the category
+    const filteredStrayData = category === 'all' ? storedStrayData : storedStrayData.filter(stray => stray.type === category);
 
-    const p = document.createElement('p');
-    p.textContent = stray.name;
+    // display the filtered stray data
+    filteredStrayData.forEach((stray, index) => {
+        const strayBox = document.createElement('div');
+        strayBox.classList.add('strayBox');
+        strayBox.setAttribute('data-index', index + 1);
+        strayBox.setAttribute('data-name', stray.name);
 
-    strayBox.addEventListener('click', () => displayDescModal(stray));
+        const img = document.createElement('img');
+        img.src = stray.imgSrc;
 
-    strayBox.appendChild(img);
-    strayBox.appendChild(p);
-    container.appendChild(strayBox);
-  });
+        const p = document.createElement('p');
+        p.textContent = stray.name;
+
+        strayBox.addEventListener('click', () => displayDescModal(stray));
+
+        strayBox.appendChild(img);
+        strayBox.appendChild(p);
+        container.appendChild(strayBox);
+    });
 }
-

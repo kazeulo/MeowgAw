@@ -416,7 +416,7 @@ section{
 
 .slider-container{
 	text-align: center;
-	background: #e0b668;
+	background: #f1c5b7;
 	padding: 55px;
 	width: 100%;
 	height: auto;
@@ -580,13 +580,28 @@ footer{
 /***************gallery*******************/
 
 .galleryBanner {
+	margin-top:70px;
     display: flex;
     align-items: center;
-    height: 350px;
-    background-color: #f1c5b7; 
+    height: 320px;
+    background: url(../pics/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.galleryBanner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .galleryBanner .searchBar{
+	z-index: 999;
 	margin: 0 auto;
 }
 
@@ -611,8 +626,12 @@ footer{
     background-color: #fff;
 }
 
+.galleryBody{
+	background: #f1c5b7;
+}
+
 .strayContainer {
-  margin: 50px 0;
+  padding: 70px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -622,7 +641,6 @@ footer{
   cursor: pointer;
   position: relative;
   display: inline-block;
-  background-color: red;
   border-radius: 30px;
   height: 310px;
   width: 310px;
@@ -656,16 +674,16 @@ footer{
 }
 
 .strayModal {
-	z-index: 1000;
+    z-index: 10001;
     display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-	overflow: auto;
-	background-color: rgba(0, 0, 0, 0.5);
-	padding-top: 15px;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 15px;
 }
 
 .descContainer{
@@ -696,6 +714,41 @@ footer{
 	color: #a96357;
 	border: 1px solid #a96357;
 	background-color: white;
+}
+
+.categoryButtons {
+	z-index: 999;
+    position: absolute;
+    top: calc(58% - 40px);
+    width: 35vw;
+    display: flex;
+    justify-content: space-around;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.5s ease;
+}
+
+.categoryButtons button{
+	font-weight: bold;
+	color: #a96357;
+	background-color: white;
+	top: 45px;
+	width: 80px;
+	height: 80px;
+	border-radius: 10px;
+	border: 2px solid #a96357;
+}
+
+.categoryButtons button:hover{
+	background-color: #a96357;
+	border: white 2px solid;
+	color: white;
+}
+
+.categoryButtons button.active{
+	background-color: #a96357;
+	border: white 2px solid;
+	color: white;
 }
 
 /***************about us*******************/

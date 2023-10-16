@@ -22,6 +22,10 @@ sr.reveal('.infosection h2', {delay: 200, origin:'top'});
 sr.reveal('.infosection', {delay: 500, origin:'left'});
 sr.reveal('.slider-container h2', {delay: 100, origin:'top'});
 sr.reveal('.wrapper', {delay: 70, origin:'left'});
+sr.reveal('.reveal', {
+    interval: 130, 
+    origin: 'top' 
+});
 
 
 /********change bg color on scroll*********/

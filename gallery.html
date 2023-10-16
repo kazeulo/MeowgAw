@@ -9,14 +9,14 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 		<!---------------favicon----------------->
 		<link rel="shortcut icon" type="image/png" href="pics/icon.png">
-		<link rel= "stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 		<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+		<link rel= "stylesheet" href="css/style.css">
 	</head>
 
 	<body>
 	<!-------------header--------------->
-		<header id="header" class="header">
+		<header id="header" class="header" style="background: linear-gradient(245.59deg, #ffdcd1 0%, #f1c5b7 28.53%, #a96357 75.52%);">
 			<a href="index.html" class="logo"><img src="pics/logo.png" id="logopic"></a>
 
 			<ul class="navlist">
@@ -25,7 +25,7 @@
 				<li><a href="about.html">About Us</a></li>
 				<li><a href="#">FAQs</a></li>
 			</ul>
-
+ 
 			<ul class="sign">
 				<li><button class="user_auth" onclick="openPopup('signin-popup')">Sign Up</button></li>
             	<li><button class="modal user_auth" onclick="openPopup('login-popup')">Sign In</button></li>
@@ -84,33 +84,35 @@
 		    </div>
 		</header>
 
-		<div class="galleryBanner">
+		<!---gallery banner---->
+		<div class="galleryBanner reveal">
 
 			<div class="searchBar">
 				<input type="search" placeholder="Search...">
     			<button type="submit"><i class="fas fa-search"></i></button>
     		</div>
+
 		</div>
 
-		<div class="categoryButtons">
-			<button onclick="showStrayData('all')">All</button>
-    		<button onclick="showStrayData('cat')">Cats</button>
-    		<button onclick="showStrayData('dog')">Dogs</button>
+		<div class="categoryButtons reveal">
+			<button onclick="showStrayData('all')" id="allBtn">All</button>
+	    	<button onclick="showStrayData('cat')" id="catBtn">Cats</button>
+	    	<button onclick="showStrayData('dog')" id="dogBtn">Dogs</button>
   		</div>
 
-		<div class="galleryBody">
+  		<div id="descModal" class="strayModal reveal">
+  			<div class="descContainer">
+    			<span class="close" onclick="closePopup('descModal')" style="color:#a96357">&times;</span>
+    			<div id="desc">
+      			<!---content in js---->
+    			</div>
+  			</div>
+		</div>
 
-			<div class="strayContainer">
+		<div class="galleryBody reveal">
+
+			<div class="strayContainer reveal">
 				<!---content in js---->
-			</div>
-
-			<div id="descModal" class="strayModal">
-  				<div class="descContainer">
-    				<span class="close" onclick="closePopup('descModal')" style="color:#a96357">&times;</span>
-    				<div id="desc">
-      				<!---content in js---->
-    				</div>
-  				</div>
 			</div>
 
 		</div>
