@@ -1,8 +1,14 @@
 // sample stray data
 const strayData = [
-  { imgSrc: 'pics/cat/1.jpg', name: 'Cool Cat', type: 'cat', gender:'female', story:"Insert short story or description."},
-  { imgSrc: 'pics/cat/2.jpg', name: 'Cute Cat', type: 'cat', gender:'female', story:"Insert short story or description."},
-  { imgSrc: 'pics/dog/1.jpg', name: 'Cute Dog', type: 'dog', gender:'male', story:"Insert short story or description."},
+  { imgSrc: 'pics/cat/1.jpg', name: 'Cool Cat', type: 'cat', 
+    gender:'female', breed: 'Puspin', 
+    story:"Insert short story, escription, characteristics, personality, disability, etc."},
+  { imgSrc: 'pics/cat/2.jpg', name: 'Cute Cat', type: 'cat',
+    gender:'female', breed: 'Unknown',
+    story:"Insert short story, escription, characteristics, personality, disability, etc."},
+  { imgSrc: 'pics/dog/1.jpg', name: 'Cute Dog', type: 'dog',
+    gender:'male', breed: 'Askal',
+    story:"Insert short story, escription, characteristics, personality, disability, etc."},
   // can add more stray here
 ];
 
@@ -22,14 +28,53 @@ function displayDescModal(stray) {
   const modal = document.getElementById('descModal');
   const modalContent = document.getElementById('desc');
 
+
+  // modal content
   modalContent.innerHTML = `
-    <img src="${stray.imgSrc}" alt="${stray.name}">
-    <p>Name: ${stray.name}</p>
-    <p>Gender: ${stray.gender}</p><br>
-    <h3>About ${stray.name}</h3>
-    <p>${stray.story}</p>
-    <button class="adoptButton" type="submit">Adopt ${stray.name}</button>
-  `;
+    <div class="details-container">
+      <h3>Meet ${stray.name}</h3>
+
+      <div class="details">
+        <div class="image">
+          <img src="${stray.imgSrc}" alt="${stray.name}">
+        </div>
+
+        <div class="description">
+          <p>Name: ${stray.name}</p>
+          <p>Gender: ${stray.gender}</p>
+          <p>Breed: ${stray.breed}</p><br>
+        </div>
+      </div>
+
+      <h4>About ${stray.name}</h4>
+      <p>${stray.story}</p>
+    </div>
+
+    <div class="adoptionForm">
+      <h3>Interested in adopting ${stray.name}?</h3>
+
+      <form>
+        <label for="name">Full Name</label>
+        <input type="text" id="name">
+        <label for="email">Email Address</label>
+        <input type="email" id="email">
+        <label for="reason">Reason for Adoption</label>
+        <input type="text" id="reason">
+
+        <label for="interviewMode">Preferred Interview Mode:</label>
+          <div id="interviewMode">
+            <input type="radio" id="f2f" name="interview" value="face-to-face">
+            <label for="f2f">Face-to-Face</label><br>
+            <input type="radio" id="zoom" name="interview" value="zoom">
+            <label for="zoom">Zoom</label>
+          </div>
+
+        <label for="schedule">Preferred Interview Schedule:</label>
+        <input type="date" id="schedule">
+        <button class="adoptButton" type="submit">Adopt ${stray.name}</button>
+      </form>
+    </div>
+    `;
 
   modal.style.display = 'block';
 
@@ -47,7 +92,6 @@ function displayDescModal(stray) {
   };
 }
 
-// Update this line to call the updated function
 function displayStrayData() {
   const container = document.querySelector('.strayContainer');
   const storedStrayData = retrieveStrayData();
@@ -115,4 +159,9 @@ function showStrayData(category) {
         strayBox.appendChild(p);
         container.appendChild(strayBox);
     });
+}
+
+function closeDesc(popupId) {
+    var popup = document.getElementById(popupId);
+        popup.style.display = "none";
 }

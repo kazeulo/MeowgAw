@@ -44,8 +44,7 @@ function changeBg() {
 
 window.addEventListener('scroll', changeBg);
 
-
-/*************scroll down button***********/
+// ABOUT PAGE
 function showContent(section) {
     const buttons = document.querySelectorAll('.misvis-btn');
 
@@ -76,7 +75,7 @@ function showContent(section) {
 document.getElementById('missionContent').style.display = 'block';
 document.querySelector('.misvis-btn[onclick="showContent(\'mission\')"]').classList.add('active');
 
-
+// POP UPS
 // Show and hide popups
 function openPopup(popupId) {
     var popup = document.getElementById(popupId);
@@ -85,9 +84,10 @@ function openPopup(popupId) {
 
 function closePopup(popupId) {
     var popup = document.getElementById(popupId);
-        popup.style.display = "none";
+    popup.style.display = "none";
 }
 
+// HEART REACT FOR GALLERY PAGE
 // heart
 function toggleHeart(element) {
   element.classList.toggle('liked');
