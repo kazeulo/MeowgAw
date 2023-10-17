@@ -23,7 +23,7 @@
 					<li><a href="index.html">Home</a></li>
 					<li><a href="gallery.html">Gallery</a></li>
 					<li><a href="about.html">About Us</a></li>
-					<li><a href="#">FAQs</a></li>
+					<li><a href="#">Blogs</a></li>
 			</ul>
 
 			<ul class="sign">
@@ -36,7 +36,7 @@
 
 			<!-- Pop-up for sign up -->
 			<div id="signin-popup" class="popup">
-		        <div class="popup-content">
+		        <div class="popup-content" id="popup-content">
 		            <span class="close" onclick="closePopup('signin-popup')">&times;</span>
 
 		            <form>
@@ -56,14 +56,14 @@
 			            <p class="reminder">By clicking "Sign Up", I understand and agree to the MeowgAw's collective 
 			            <a href="">Terms</a>, <a href="#">Terms of Use</a>, and <a href="#">Privacy Policy</a>.</p>
 
-			            <p class="alternate">Already have an account? <a href="#">Log in</a></p>
+			            <p class="alternate">Already have an account? <button onclick="switchPopup('signin-popup', 'login-popup')">Log in<button></p>
 		        	</form>
 		        </div>
 		    </div>
 
 		    <!-- Pop-up for log in -->
 		    <div id="login-popup" class="popup">
-		        <div class="popup-content">
+		        <div class="popup-content" id="popup-content">
 		            <span class="close" onclick="closePopup('login-popup')">&times;</span>
 		            <form>
 		            	<img src="pics/icon.png">
@@ -78,7 +78,7 @@
 
 			            <button type="submit" class="submit">Sign In</button>
 			            <a href="#" class="forgot">Forgot Password?</a>
-			            <p class="alternate">Doesn't have an account yet? <a href="#">Sign Up</a></p>
+			            <p class="alternate">Doesn't have an account yet? <button onclick="switchPopup('login-popup', 'signin-popup')">Sign Up</button></p>
 		        	</form>
 		        </div>
 		    </div>
@@ -91,12 +91,12 @@
 				<h4>Find Your Furry Soulmate</h4>
 				<h1>MeowgAw</h1>
 				<p>Welcome to MeowgAw! We're dedicated to finding loving FURever homes for our furry friends. Discover a variety of adorable and playful pets, from cuddly cats to energetic dogs, waiting to bring joy into your life. Let's create a world where every pet finds a loving home.</p>
-				<button class="menu-btn button2">Check-out strays</button>
+				<a href="gallery.html"><button class="menu-btn button2 check">Check-out strays</button></a>
 				<button class="menu-btn button2">Donate</button>
 			</div>
 
 			<div class="menu-img">
-				<img src="pics/catto.png">
+				<img src="pics/icon2.png">
 			</div>
 		</section>
 
