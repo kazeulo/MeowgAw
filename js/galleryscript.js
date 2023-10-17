@@ -1,12 +1,12 @@
 // sample stray data
 const strayData = [
-  { imgSrc: 'pics/cat/1.jpg', name: 'Cool Cat', type: 'cat', 
+  { imgSrc: 'pics/cat/1.jpg', name: 'Cool Cat', type: 'cat', color: 'black',
     gender:'female', breed: 'Puspin', 
     story:"Insert short story, escription, characteristics, personality, disability, etc."},
-  { imgSrc: 'pics/cat/2.jpg', name: 'Cute Cat', type: 'cat',
+  { imgSrc: 'pics/cat/2.jpg', name: 'Cute Cat', type: 'cat', color: 'black',
     gender:'female', breed: 'Unknown',
     story:"Insert short story, escription, characteristics, personality, disability, etc."},
-  { imgSrc: 'pics/dog/1.jpg', name: 'Cute Dog', type: 'dog',
+  { imgSrc: 'pics/dog/1.jpg', name: 'Cute Dog', type: 'dog', color: 'brown',
     gender:'male', breed: 'Askal',
     story:"Insert short story, escription, characteristics, personality, disability, etc."},
   // can add more stray here
@@ -42,7 +42,8 @@ function displayDescModal(stray) {
         <div class="description">
           <p>Name: ${stray.name}</p>
           <p>Gender: ${stray.gender}</p>
-          <p>Breed: ${stray.breed}</p><br>
+          <p>Breed: ${stray.breed}</p>
+          <p>Color: ${stray.color}</p><br>
         </div>
       </div>
 
@@ -128,6 +129,7 @@ function showStrayData(category) {
     document.getElementById('allBtn').classList.remove('active');
     document.getElementById('catBtn').classList.remove('active');
     document.getElementById('dogBtn').classList.remove('active');
+    document.getElementById('otherBtn').classList.remove('active');
     
     document.getElementById(category + 'Btn').classList.add('active');
 
