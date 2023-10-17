@@ -296,6 +296,7 @@ header{
     grid-template-columns: repeat(2, 1fr);
 	background-image: url('../pics/bg/1.jpg');
 	background-position: center;
+	background-attachment: fixed;
 	background-size: cover;
     align-items: center;
     gap: 3rem;
